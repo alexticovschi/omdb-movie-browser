@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
+import SearchBox from '../components/SearchBox';
+
 import './App.css';
+
 
 class App extends Component {
   state = {
+    search_term : '',
     movies: []  
   }
 
@@ -10,10 +14,17 @@ class App extends Component {
     this.getMovies();
   }
 
+  onSearchChange = (event) => {
+    event.preventDefault();
+
+    this.setState({ search_term: event.target.value });
+    console.log('[searchField]:',this.state.search_term);
+  }
+
   getMovies = async () => {
     const APIKEY = '65480b96';
 
-    const resp = await fetch(`http://www.omdbapi.com/?s=marvel&apikey=${APIKEY}`);
+    const resp = await fetch(`http://www.omdbapi.com/?s=${this.state.search_term}&apikey=${APIKEY}`);
 
         // Wait for the response and return as JSON
         const movies = await resp.json();
@@ -25,7 +36,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        OMDb Movie Info - React
+        <SearchBox 
+          onSearchChange={this.onSearchChange}
+          getMovies={this.getMovies}/> 
       </div>
     );
   }
