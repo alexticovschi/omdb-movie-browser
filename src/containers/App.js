@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SearchBox from '../components/SearchBox';
+import MovieList from '../components/MovieList';
 
 import './App.css';
 
@@ -39,6 +40,9 @@ class App extends Component {
         <SearchBox 
           onSearchChange={this.onSearchChange}
           getMovies={this.getMovies}/> 
+        <MovieList 
+          movieList={this.state.movies} 
+        />
       </div>
     );
   }
