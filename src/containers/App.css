@@ -2,31 +2,140 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+body {
+  box-sizing: border-box;
+  background: #f2f2f2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+header {
+  height: 120px;
+  background-color: #368cdd;
+}
+
+header > img {
+  width: 100px;
+  margin: 16px 0px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.main-content {
+  margin: 10px;
+}
+
+h3 {
+  font-family: 'Libre Baskerville', serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+
+  .card {
+      flex: 0 1 calc(50% - 1rem);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+      flex: 0 1 calc(24% - 1rem);
+  }
+}
+
+.card {
+  margin: 25px auto;
+  background-color: white;
+  box-shadow: 0 6px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-title {
+  font-size: 19px;
+}
+
+.content {
+  background-color: #fff;
+  text-align: center;
+  padding: 0.8rem;
+}
+
+.content span {
+  color: chocolate
+}
+
+.content h3 {
+  font-size: .9rem;
+  line-height: 1.4rem;
+}
+
+.btn {
+  background-color: #368cdd;
+  color: #fff;
+  padding: .6rem;
+  margin-top: 1rem;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  text-decoration: none;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn:hover, input[type=button]:hover {
+  background-color: #5b9ad6;
+}
+
+
+input[type=text] {
+  margin-top: 60px;
+  width: 180px;
+  box-sizing: border-box;
+  border: 2px solid rgb(132, 159, 165);
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('/images/icon.png');
+  background-size: 26px;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.6s ease-in-out;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+input[type=text]:focus {
+  width: 30%;
+}
+
+input[type=button] {
+  background-color: #368cdd;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
   color: white;
+  padding: 15px 12px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 765px) {
+  input[type=text]:focus {
+    width: 70%;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+} 

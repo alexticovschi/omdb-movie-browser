@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBox from '../components/SearchBox';
 import MovieList from '../components/MovieList';
+import Header from '../components/Header';
 
 import './App.css';
 
@@ -9,10 +10,6 @@ class App extends Component {
   state = {
     search_term : '',
     movies: []  
-  }
-
-  componentDidMount() {
-    this.getMovies();
   }
 
   onSearchChange = (event) => {
@@ -48,6 +45,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header/>
         <SearchBox 
           onSearchChange={this.onSearchChange}
           getMovies={this.getMovies}/> 
