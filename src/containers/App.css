@@ -4,17 +4,27 @@
 
 body {
   box-sizing: border-box;
-  background: #f2f2f2;
+  background: #000;
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 120px;
   background-color: #368cdd;
 }
 
-header > img {
+.header-div > img {
   width: 100px;
   margin: 16px 0px;
+}
+
+.header-div > h1 {
+  color: #fff;
+  margin-top: 40px;
+  margin-left: 12px;
+  float: right;
 }
 
 .container {
@@ -81,6 +91,7 @@ img {
 
 .btn {
   background-color: #368cdd;
+  background-color: #000;
   color: #fff;
   padding: .6rem;
   margin-top: 1rem;
@@ -88,11 +99,11 @@ img {
   margin: 0 auto;
   border: none;
   text-decoration: none;
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn:hover, input[type=button]:hover {
-  background-color: #5b9ad6;
+  background-color: #315b83;
 }
 
 

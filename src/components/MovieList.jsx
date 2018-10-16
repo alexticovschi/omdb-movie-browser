@@ -4,6 +4,7 @@ import MovieItem from './MovieItem';
 const MovieList = ({ movieList, getMovieById }) => {
     const list_of_movies = movieList && movieList.map(movie => (
         <MovieItem 
+            key={movie.imdbID}
             getMovieById={getMovieById}
             title={movie.Title}
             poster={movie.Poster}
